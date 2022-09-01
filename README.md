@@ -62,7 +62,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-Reiniciar y validar uso de docker con el usuario
+:warning: Reiniciar y validar uso de docker con el usuario
 
 ```
 docker run hello-world
