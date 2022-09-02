@@ -11,6 +11,30 @@ docker compose up
 
 Una vez iniciado acceder a [http://localhost:8000/](http://localhost:8000/)
 
+## Guía para agregar clave ssh
+
+Crear la clave con tu email
+
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+agregar la clave al agente ssh
+
+```
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+Copiar la clave pública
+
+```
+cat ~/.ssh/id_ed25519.pub
+  # Then select and copy the contents of the id_ed25519.pub file
+  # displayed in the terminal to your clipboard
+```
+
+seguir la guía [para agregar la clave a la cuenta github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) 
 
 ## Guía de instalación docker en Ubuntu
 
